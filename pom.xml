@@ -27,7 +27,7 @@
   <groupId>org.apache.james</groupId>
   <artifactId>apache-mime4j</artifactId>
   <name>Apache JAMES Mime4j</name>
-  <version>0.6.2-SNAPSHOT</version>
+  <version>0.6.2-LJ</version>
   <description>Java stream based MIME message parser</description>
   <url>http://james.apache.org/mime4j</url>
   <issueManagement>
@@ -35,6 +35,16 @@
   </issueManagement>
   <inceptionYear>2004</inceptionYear>
   <distributionManagement>
+    <repository>
+      <id>devhaus</id>
+      <name>Devhaus</name>
+      <url>https://repo.devhaus.com/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>devhaus</id>
+      <name>Devhaus</name>
+      <url>https://repo.devhaus.com/repository/maven-snapshots/</url>
+    </snapshotRepository>
     <site>
       <id>mime4j-website</id>
       <url>http://people.apache.org/www/james.apache.org/mime4j/</url>
@@ -114,7 +124,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.5</version>
+        <version>3.0.1</version>
         <executions>
           <execution>
             <id>create-javadocs</id> <!-- this is used for inheritance merges -->
@@ -373,6 +383,8 @@
   </mailingLists>
   
   <properties>
-    <compileSource>1.5</compileSource>
+    <compileSource>1.8</compileSource>
+    <maven.test.failure.ignore>true</maven.test.failure.ignore>
+    <maven.javadoc.skip>true</maven.javadoc.skip>
   </properties>
 </project>
