@@ -33,14 +33,14 @@ public class ContentUtil {
 
     /**
      * Encodes the specified string into an immutable sequence of bytes using
-     * the US-ASCII charset.
+     * the UTF-8 charset.
      * 
      * @param string
      *            string to encode.
      * @return encoded string as an immutable sequence of bytes.
      */
     public static ByteSequence encode(String string) {
-        return encode(CharsetUtil.US_ASCII, string);
+        return encode(CharsetUtil.UTF_8, string);
     }
 
     /**
@@ -61,7 +61,7 @@ public class ContentUtil {
     }
 
     /**
-     * Decodes the specified sequence of bytes into a string using the US-ASCII
+     * Decodes the specified sequence of bytes into a string using the UTF-8
      * charset.
      * 
      * @param byteSequence
@@ -69,7 +69,7 @@ public class ContentUtil {
      * @return decoded string.
      */
     public static String decode(ByteSequence byteSequence) {
-        return decode(CharsetUtil.US_ASCII, byteSequence, 0, byteSequence
+        return decode(CharsetUtil.UTF_8, byteSequence, 0, byteSequence
                 .length());
     }
 
@@ -89,7 +89,7 @@ public class ContentUtil {
 
     /**
      * Decodes a sub-sequence of the specified sequence of bytes into a string
-     * using the US-ASCII charset.
+     * using the UTF-8 charset.
      * 
      * @param byteSequence
      *            sequence of bytes to decode.
@@ -101,7 +101,7 @@ public class ContentUtil {
      */
     public static String decode(ByteSequence byteSequence, int offset,
             int length) {
-        return decode(CharsetUtil.US_ASCII, byteSequence, offset, length);
+        return decode(CharsetUtil.UTF_8, byteSequence, offset, length);
     }
 
     /**
